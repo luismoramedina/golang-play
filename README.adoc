@@ -1,0 +1,3 @@
+= Playing with go
+
+some code in golang, iterations, functions, maps and arrays
