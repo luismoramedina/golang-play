@@ -8,10 +8,11 @@ import (
 func main() {
    encoded := "{"+
       `  "tracks": {`+
-      `  "items": [ {`+
-      `    "uri": "spotify:track:6e7TwT8TUE3BHN7aokBKfq"`+
-      `  }]`+
-      `}}`
+      `    "items": [ {`+
+      `      "uri": "spotify:track:6e7TwT8TUE3BHN7aokBKfq"`+
+      `    } ]`+
+      `  }`+
+      `}`
 
    type Item struct {
       Uri string
@@ -26,7 +27,9 @@ func main() {
    if err != nil {
       panic(err)
    }
-   fmt.Println(tracks["tracks"]["items"][0].Uri)
-   
+
+   if len(tracks["tracks"]["items"]) > 0 {
+      fmt.Println(tracks["tracks"]["items"][0].Uri)
+   }
 
 }
