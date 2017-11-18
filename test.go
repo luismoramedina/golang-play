@@ -7,7 +7,7 @@ import "strconv"
 func main() {
 	x := 3
 	s := []string{"a", "b"}
-	m := map[string]string {}
+	m := map[string]string{}
 	fmt.Println(x)
 	fmt.Println(s)
 	m["a"] = "b"
@@ -26,7 +26,5 @@ func main() {
 	for position, value := range s {
 		fmt.Println(position, value)
 	}
-
-
 
 }
